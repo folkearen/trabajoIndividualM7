@@ -1,0 +1,27 @@
+
+{% load static %}
+<div class="modal fade model_container_card"  id="{% block name_modal %}{% endblock name_modal %}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    
+  <div class="modal-dialog modal-dialog-scrollable " role="document">
+      
+    <div class="modal-content modal_card">
+        
+      <div class="modal-header  border-0">
+        <a href=" {% url 'logout' %} " type="button" class="close close_modal" data-bs-dismiss="modal" aria-label="Close">
+          <img class="exit_modal_btn"  aria-hidden="true"src=" {% static 'task/img/exit.svg' %} " alt="">
+        </a>
+
+      </div>
+
+      <div class="modal-body scroll_modal">
+
+          {% block iframe_modal %}
+          {% endblock iframe_modal %}
+          
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+ 

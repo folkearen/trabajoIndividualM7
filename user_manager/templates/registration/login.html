@@ -1,0 +1,10 @@
+{% extends 'user_manager/base_user_manager.html' %}
+{% block main_user_manager %}
+<h2 class="modal-title title_modal_custom mb-4" id="exampleModalLabel">Iniciar sesión</h2>
+<form class="forms_style" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit" class="btn_form">Iniciar sesión</button>
+    <a class="text-center mt-1" href=" {% url 'register' %} ">¿No tiene una cuenta? Regístrese</a>
+</form>
+{% endblock main_user_manager %}
