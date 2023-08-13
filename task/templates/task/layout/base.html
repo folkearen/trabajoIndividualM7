@@ -10,7 +10,12 @@
 
     <title>{% block title %}{% endblock title %}</title>
 </head>
-<body>
+<body class="principal_body">
+    <header class="principal_header">
+        {% block header %}
+
+        {% endblock header %}
+    </header>
     <main>
         {% block main %}
         {% endblock main %}

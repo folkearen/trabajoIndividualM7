@@ -1,13 +1,5 @@
 {% load static %}
-<nav>
-            {% comment %} <button type="button" class="pb2 btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                Abrir Modal
-            </button> {% endcomment %}
-          
-                {% comment %} <a href=" {% url 'logout' %} "> <img class="shape_nav" src=" {% static 'task/img/exit.svg' %} " alt=""></a> {% endcomment %}
-       
-                <img class="shape_nav" data-bs-toggle="modal" data-bs-target="#registerModal" src=" {% static 'task/img/addUser.svg' %} " alt="">
-                <img class="shape_nav" data-bs-toggle="modal" data-bs-target="#loginModal" src=" {% static 'task/img/login.svg' %} " alt="">
-       
-            
+<nav class='nav_principal'>
+    <img class="shape_nav" data-bs-toggle="modal" data-bs-target="#registerModal" src=" {% static 'task/img/addUser.svg' %} " alt="">
+    <img class="shape_nav" data-bs-toggle="modal" data-bs-target="#loginModal" src=" {% static 'task/img/login.svg' %} " alt="">
 </nav>

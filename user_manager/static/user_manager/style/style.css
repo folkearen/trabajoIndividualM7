@@ -42,17 +42,42 @@ a:hover{
 
 }
 .btn_form {
-    background-color:#16b8f3;
-    border: none;
-    border-radius: 0.5rem;
+    background-color: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-right: 1px solid rgba(255,255,255, 0.1);
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     color: white;
-    font-weight: bold;
-    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    padding: 1rem;
+    position: relative;
 
 }
-.btn_form:hover {
-    background-color: orange;
+.btn_form:hover  {
+    cursor: pointer;
+    transform: scaleX(1.2);
+    transition: 0.5s;
 }
+
+.btn_form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: rgba(255,255,255, 0.3);
+    transform: skewX(45deg) translateX(1058px);
+    transition: 1s;
+}
+.btn_form:hover::before {
+    transform: skewX(45deg) translateX(-338px) scale(1.2);
+}
+
+
+
 .title_modal_custom {
     color: white;
     position: relative;
@@ -67,3 +92,24 @@ a:hover{
     position: absolute;
     width: 140px;
 }
+.list_error_container {
+    color: white;
+}
+.list_error_container ul li{
+    color: white;
+}
+
+
+
+/* .btn_form {
+    background-color:#16b8f3;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem;
+
+}
+.btn_form:hover {
+    background-color: orange;
+} */

@@ -4,7 +4,7 @@
 <form class="forms_style" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-    <button type="submit" class="btn_form">Iniciar sesión</button>
-    <a class="text-center mt-1" href=" {% url 'register' %} ">¿No tiene una cuenta? Regístrese</a>
+    <button id="boton-redireccion" type="submit" class="btn_form">Iniciar sesión</button>
+    <a  class="text-center mt-1" href=" {% url 'register' %} ">¿No tiene una cuenta? Regístrese</a>
 </form>
 {% endblock main_user_manager %}

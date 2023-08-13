@@ -10,6 +10,18 @@ body {
     background: linear-gradient(to left, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }   
+.principal_header{
+    
+    min-height: 100vh;
+    padding-top: 2rem;
+    width: 10vw;
+    
+}
+.principal_body {
+    align-items: center;
+    display: flex;
+
+}
 a {
     color: #16b8f3;
     text-decoration: none;
@@ -23,12 +35,69 @@ a {
     background-color:#16b8f3;
     border-radius: 2rem;
 }
-nav {
-    background-color: white;
+.nav_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.nav_principal {
+    display: flex;
+    flex-direction: column;
 }
 .shape_nav {
+    background-color: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-right: 1px solid rgba(255,255,255, 0.1);
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     height: 4rem;
+    margin: 2rem;
+    padding:1rem;
+    position: relative;
     width: 4rem;
+}
+.shape_nav:hover {
+    border: solid 1px #16b8f3;
+    box-shadow: 1px 1px 5px rgba(255,255,255,0.5);
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+.logo-container {
+    position: relative;
+    
+}
+.logo-text {
+    font-size: 10px;
+    font-weight: bold;
+    color: #16b8f3;
+    /* color: #0ff; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2px solid #16b8f3;
+    box-shadow: 0 0 10px #16b8f3,
+                0 0 20px #16b8f3,
+                0 0 30px #16b8f3,
+                0 0 40px #16b8f3,
+                0 0 70px #16b8f3;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: aura-animation 5s linear infinite;
 }
 .close_modal {
     background-color: transparent;
@@ -38,6 +107,7 @@ nav {
     height: 2rem;
     width: 2rem;
 }
+
 .modal_card {
     background-color: rgba(255,255,255, 0.1);
     backdrop-filter: blur(5px);
@@ -46,7 +116,62 @@ nav {
     border-bottom: 1px solid rgba(255,255,255, 0.1);
     border-radius: 10px;
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    /* position: relative; */
 }
+/* .modal_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: rgba(255,255,255, 0.3);
+    transform: skewX(45deg) translateX(738px);
+    transition: 1.2s;
+}
+.modal_card:hover::before {
+    transform: skewX(45deg) translateX(-338px);
+} */
+
 .modal-backdrop {
     display: none !important;
+}
+
+.logo_super {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 8rem;
+    width: 8rem;
+
+}
+
+.scale-up-vertical-center{animation:scale-up-vertical-center 0.3s} @keyframes scale-up-vertical-center{0%{transform:scaleY(.2)}100%{transform:scaleY(1)}}
+
+@keyframes aura-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1090px) {
+    .modal_card {
+
+        /* position: relative; */
+       
+        transform: translateX(-20%);
+        width: 80vw !important;
+    
+    }
+    /* .mod
+    /* Agrega aquí tus reglas de estilo para pantallas más grandes */
 }

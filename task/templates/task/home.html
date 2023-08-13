@@ -1,13 +1,21 @@
 {% extends 'task/layout/base.html' %}
-{% block main %}
+{% block header %}
 
-    <div class='nav'>
+    <div class='nav_container'>
+        <div class="logo_super">
+            <div class="logo-container">
+                <div class="circle"></div>
+                <div class="logo-text">almubaDev</div>
+                <!-- <div class="python-logo"><img src="ruta_a_logo_python.png" alt="Python Logo"></div> -->
+                <!-- <div class="django-logo"><img src="ruta_a_logo_django.png" alt="Django Logo"></div> -->
+            </div>
+        </div>
         {% include 'task/partials/navbar.html' %}
     </div>
-    
+{% endblock header %}
+{% block main %}
     <div class='modals_container'>
         {% include 'task/partials/registerModal.html' %}
         {% include 'task/partials/loginModal.html' %}
     </div>
-    
 {% endblock main %}

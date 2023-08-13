@@ -17,7 +17,7 @@ class CustomCreationForm(UserCreationForm):
             'username': forms.EmailInput(attrs={'placeholder': 'Ej: tucorreo@dominio.com'}),
             'first_name': forms.TextInput(attrs={'placeholder': 'Ej: Juan Pedro'}),
             'last_name': forms.TextInput(attrs={'placeholder': 'Ej: Pérez Machuca'}),
-            'password1': forms.PasswordInput(attrs={'placeholder': 'Clave secreta'}),
+            'contraseña': forms.PasswordInput(attrs={'placeholder': 'Clave secreta'}),
             'password2': forms.PasswordInput(attrs={'placeholder': 'Repite la clave secreta'})
         }
 
