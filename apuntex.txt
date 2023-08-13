@@ -1,3 +1,0 @@
-        <a href=" {% url 'logout' %} " type="button" class="close close_modal" data-bs-dismiss="modal" aria-label="Close">
-          <img class="exit_modal_btn"  aria-hidden="true"src=" {% static 'task/img/exit.svg' %} " alt="">
-        </a>

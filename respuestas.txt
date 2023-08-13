@@ -1,0 +1,21 @@
+Iteración 1
+Preguntas:
+
+- ¿Cuáles son las bases de datos soportadas por Django y en qué se diferencian?
+- ¿Qué es una migración en Django y para qué se utiliza?
+- ¿Cuál es la diferencia entre usar consultas SQL y consultas ORM en Django?
+- ¿Cómo se instalan los paquetes de base de datos en Django y cuál es su importancia?
+- ¿Qué ventajas ofrece Django como ORM para la integración con una base de datos?
+
+
+Respuestas: 
+
+Las bases de datos soportadas por Django incluyen SQLite, PostgreSQL, MySQL y Oracle. Se diferencian en términos de rendimiento, escalabilidad y características, lo que permite elegir la mejor opción según las necesidades del proyecto.
+
+Una migración en Django es un proceso que aplica cambios en el esquema de la base de datos, como agregar tablas, campos o modificar restricciones. Se utiliza para mantener la coherencia entre el modelo de datos y la base de datos a lo largo del tiempo.
+
+Las consultas SQL son escritas en lenguaje SQL y operan directamente sobre la base de datos. Las consultas ORM (Object-Relational Mapping) en Django se construyen utilizando métodos y clases en Python y se traducen a consultas SQL en segundo plano. Las consultas ORM son más legibles y portátiles, mientras que SQL ofrece un mayor control sobre las consultas específicas.
+
+Los paquetes de base de datos en Django se instalan a través de las bibliotecas del motor de la base de datos correspondiente, como "psycopg2" para PostgreSQL o "mysqlclient" para MySQL. Estos paquetes son esenciales para la comunicación entre Django y la base de datos elegida.
+
+Django como ORM ofrece ventajas como abstracción de la base de datos, lo que permite escribir consultas independientes del motor de la base de datos. También ofrece seguridad contra ataques de inyección SQL, portabilidad entre bases de datos y facilita la creación y modificación de tablas y relaciones sin escribir SQL directamente.
