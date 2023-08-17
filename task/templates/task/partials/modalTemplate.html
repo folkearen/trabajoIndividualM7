@@ -1,33 +1,15 @@
-
 {% load static %}
-
-<div class="modal scale-up-vertical-center model_container_card"  id="{% block name_modal %}{% endblock name_modal %}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-    
-  <div class="modal-dialog modal-dialog-scrollable " role="document">
-      
+<!-- Modal -->
+<div class="modal" id= "{% block modalName %} {% endblock modalName %}"  data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content modal_card">
-
-        <div class="modal-header  border-0">
-          <a href=" {% url 'logout' %} " type="button" class="close close_modal" data-bs-dismiss="modal" aria-label="Close">
-            <img class="exit_modal_btn"  aria-hidden="true"src=" {% static 'task/img/exit.svg' %} " alt="">
-          </a>
-        </div>
-
-        {% comment %} <div class="modal-header  border-0">
-          <button type="button" class="close close_modal" data-bs-dismiss="modal" aria-label="Close">
-            <img class="exit_modal_btn"  aria-hidden="true"src=" {% static 'task/img/exit.svg' %} " alt="">
-          </button>
-        </div> {% endcomment %}
-
-   
-
-      <div class="modal-body scroll_modal">
-          {% block iframe_modal %}
-          {% endblock iframe_modal %}    
+      <div class="modal-header border-0">
+            <img class="close_modal"   data-bs-dismiss="modal" aria-label="Close" src="{% static 'task/img/back.svg' %}" alt="">
       </div>
-    
+      <div class="modal-body modal_scrollbar">
+            {% block modalBody %}{% endblock modalBody %}
+      </div>
+
     </div>
-    
   </div>
 </div>
- 

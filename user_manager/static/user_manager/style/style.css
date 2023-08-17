@@ -12,22 +12,24 @@ a:hover{
     display: flex;
     color: white;
     flex-direction: column;
+    padding: 2rem;
+    width: 90%;
+    overflow: hidden;
+   
 }
 
 .forms_style label {
-    display: block;
     margin-bottom: 0.4rem;
     width: 100%;
 }
-.forms_style input {
-    
+.forms_style input, .forms_style textarea { 
     background: rgba(255,255,255,0.2);
     border: none;
     border: 1px solid rgba(255,255,255, 0.5);
     border-right: 1px solid rgba(255,255,255, 0.1);
     border-bottom: 1px solid rgba(255,255,255, 0.1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    color: rgba(240, 248, 255,0.5);
+    color: rgba(240, 248, 255,0.8);
     display: block;
     letter-spacing: 1px;
     outline: none;
@@ -53,11 +55,11 @@ a:hover{
     margin-top: 0.3rem;
     padding: 1rem;
     position: relative;
+    overflow: hidden;
 
 }
 .btn_form:hover  {
     cursor: pointer;
-    transform: scaleX(1.2);
     transition: 0.5s;
 }
 
@@ -69,19 +71,26 @@ a:hover{
     width: 100px;
     height: 100%;
     background: rgba(255,255,255, 0.3);
-    transform: skewX(45deg) translateX(1058px);
+    transform: skewX(45deg) translateX(950px);
     transition: 1s;
+    -webkit-transform: skewX(45deg) translateX(950px);
+    -moz-transform: skewX(45deg) translateX(950px);
+    -ms-transform: skewX(45deg) translateX(950px);
+    -o-transform: skewX(45deg) translateX(950px);
 }
 .btn_form:hover::before {
-    transform: skewX(45deg) translateX(-338px) scale(1.2);
+    transform: skewX(45deg) translateX(-140px);
+    -webkit-transform: skewX(45deg) translateX(-140px);
+    -moz-transform: skewX(45deg) translateX(-140px);
+    -ms-transform: skewX(45deg) translateX(-140px);
+    -o-transform: skewX(45deg) translateX(-140px);
 }
-
-
 
 .title_modal_custom {
     color: white;
     position: relative;
     text-align: star;
+    padding-top: 2rem;
 }
 .title_modal_custom::before {
     content: '';

@@ -1,0 +1,12 @@
+{% extends 'task/layout/base.html' %}
+{% load static %}
+{% block main %}
+    <div class="detail_task f_d_column">
+        <p>Título: {{ taskDetail.title}} </p>
+        <p>Descripción: {{ taskDetail.description}} </p>
+        <p>Fecha límite: {{ taskDetail.deadline}}</p>
+        <p>Estado: {{ taskDetail.status}}</p>  
+    </div>
+   
+    
+{% endblock main %}

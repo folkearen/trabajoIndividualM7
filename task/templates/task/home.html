@@ -1,6 +1,6 @@
 {% extends 'task/layout/base.html' %}
+{% block title %}Bienvenido a Task Manager{% endblock title %}
 {% block header %}
-
     <div class='nav_container'>
         <div class="logo_super">
             <div class="logo-container">
@@ -14,8 +14,5 @@
     </div>
 {% endblock header %}
 {% block main %}
-    <div class='modals_container'>
-        {% include 'task/partials/registerModal.html' %}
-        {% include 'task/partials/loginModal.html' %}
-    </div>
+    
 {% endblock main %}

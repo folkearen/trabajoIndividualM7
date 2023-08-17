@@ -1,1 +1,30 @@
-<h1>Task {{user}}</h1>
+{% extends 'task/layout/base.html' %}
+{% block title %}Menu de tareas{% endblock title %}
+
+{% block header %}
+    {% include 'task/partials/navTask.html' %}
+{% endblock header %}
+
+{% block main %}
+<h2 class="owner_task_title ">Tareas de {{ user.first_name }}</h2>
+    {% for task in  tasks %}
+        <div class='card_task_container f_d_row '>
+            <div class='card_task f_d_row'>
+                <div class='card_task_info'>
+                    <p>{{ task.title }}</p>
+                    <div class='card_task_info_datails f_d_row'>
+                        <p>{{ task.deadline }}</p>
+                        <p class='status_previews_task'>{{ task.status }}</p>
+                    </div>
+                </div>
+                <div class="card_task_manager">
+                    <a  href=" {% url 'detail' task.id %} ">Ver</a>
+                    <a href="#">Editar</a>
+                    <a href="#">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% include 'task/partials/modalCreateTask.html' %}
+    {% include 'task/partials/modalDetailTask.html' %}
+{% endblock main %}

@@ -1,5 +1,5 @@
 {% load static %}
 <nav class='nav_principal'>
-    <img class="shape_nav" data-bs-toggle="modal" data-bs-target="#registerModal" src=" {% static 'task/img/addUser.svg' %} " alt="">
-    <img class="shape_nav" data-bs-toggle="modal" data-bs-target="#loginModal" src=" {% static 'task/img/login.svg' %} " alt="">
+    <a href=" {% url 'register' %} "><img class="shape_nav"  src=" {% static 'task/img/addUser.svg' %} " alt=""></a>
+    <a href=" {% url 'login' %} "><img class="shape_nav"  src=" {% static 'task/img/login.svg' %} " alt=""></a>
 </nav>

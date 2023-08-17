@@ -19,3 +19,41 @@ Las consultas SQL son escritas en lenguaje SQL y operan directamente sobre la ba
 Los paquetes de base de datos en Django se instalan a través de las bibliotecas del motor de la base de datos correspondiente, como "psycopg2" para PostgreSQL o "mysqlclient" para MySQL. Estos paquetes son esenciales para la comunicación entre Django y la base de datos elegida.
 
 Django como ORM ofrece ventajas como abstracción de la base de datos, lo que permite escribir consultas independientes del motor de la base de datos. También ofrece seguridad contra ataques de inyección SQL, portabilidad entre bases de datos y facilita la creación y modificación de tablas y relaciones sin escribir SQL directamente.
+
+
+Iteración 2
+Preguntas:
+
+- ¿Qué es PostgreSql y cuáles son sus ventajas en comparación con otras bases de datos relacionales?
+- ¿Cuál es la diferencia entre una llave primaria simple y una llave primaria compuesta en Django?
+- ¿Cuál es el propósito de las operaciones CRUD en el desarrollo de aplicaciones web y cómo se
+implementan en Django?
+- ¿Qué herramientas o componentes adicionales de Django utilizarías para mejorar el rendimiento y la
+seguridad de una aplicación web?
+
+Respuestas: 
+
+PostgreSQL es un sistema de gestión de bases de datos relacionales de código abierto y potente. Sus ventajas incluyen soporte para tipos de datos avanzados, extensiones personalizadas, consultas complejas, rendimiento sólido y opciones de escalabilidad. En comparación con otras bases de datos, PostgreSQL destaca por su capacidad para manejar cargas de trabajo intensivas y su enfoque en la integridad y la consistencia de los datos.
+
+Una llave primaria simple en Django es un campo único que identifica de manera exclusiva cada registro en una tabla. Una llave primaria compuesta consiste en dos o más campos que juntos identifican un registro de manera única. La diferencia radica en la cantidad de campos utilizados para la identificación.
+
+Las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) son fundamentales en el desarrollo de aplicaciones web para interactuar con la base de datos. En Django, se implementan a través de los métodos y funciones proporcionados por el ORM. Por ejemplo, el método .create() para crear registros, el método .filter() para leer registros, el método .update() para actualizar registros y el método .delete() para eliminar registros.
+
+Para mejorar el rendimiento y la seguridad de una aplicación web en Django, se pueden utilizar herramientas como:
+
+Caché: Usar sistemas de caché para almacenar en memoria datos comunes y reducir la carga en la base de datos.
+
+Autenticación y autorización: Utilizar el sistema de autenticación y autorización integrado de Django para gestionar la seguridad de la aplicación.
+
+Middleware de seguridad: Implementar middleware de seguridad para proteger contra ataques comunes, como Cross-Site Scripting (XSS) y Cross-Site Request Forgery (CSRF).
+
+Indexación y optimización de consultas: Aprovechar las características de optimización y creación de índices en la base de datos para acelerar las consultas.
+
+Escalabilidad: Utilizar herramientas de escalabilidad como balanceadores de carga y sistemas de caché distribuido para manejar un aumento en el tráfico.
+
+Seguimiento y registro de errores: Emplear herramientas de seguimiento y registro de errores para monitorear y solucionar problemas en tiempo real.
+
+
+
+
+

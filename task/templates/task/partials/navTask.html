@@ -1,0 +1,13 @@
+{% load static %}
+<nav class='nav_principal nav_task_manager'>
+    <a  href=" {% url 'logout' %} "><img class="shape_nav" src=" {% static 'task/img/exit.svg' %} " alt=""></a>
+    
+  
+    <!-- Button trigger modal -->
+
+    <img class="shape_nav" data-bs-toggle="modal" data-bs-target="#createTask" src=" {% static 'task/img/createTask.svg' %} " alt="">
+    <a  href=""><img class="shape_nav" src=" {% static 'task/img/pendingTask.svg' %} " alt=""></a>
+    <a  href=""><img class="shape_nav" src=" {% static 'task/img/progressTask.svg' %} " alt=""></a>
+    <a  href=""><img class="shape_nav" src=" {% static 'task/img/completedTask.svg' %} " alt=""></a>
+    <a  href=""><img class="shape_nav" src=" {% static 'task/img/expiredTask.svg' %} " alt=""></a>
+</nav>

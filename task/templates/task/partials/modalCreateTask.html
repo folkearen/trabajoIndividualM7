@@ -1,0 +1,12 @@
+{% extends 'task/partials/modalTemplate.html' %}
+{% block modalName %}createTask{% endblock modalName %}
+{% block modalTitle %}Crear Tarea{% endblock modalTitle %}
+{% block modalBody %}
+    <form class="forms_style" action="{% url 'create'  user.id %}"  method="POST">
+        {% csrf_token %}
+        {{ formCreateTask.as_p }}
+        <button  type="submit" class="btn_form">Crear tarea</button>
+    </form>
+    
+{% endblock modalBody %}
+
