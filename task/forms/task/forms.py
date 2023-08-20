@@ -10,7 +10,7 @@ class CreateTask(ModelForm):
         exclude = ['task_owner', 'status']
         labels = {
             'title' : 'Título',
-            'description' : 'Descripción',
+            'description' : 'Descripción y observaciones',
             'deadline' : 'Fecha límite',
             'status' : 'Estado',
             'task_tag' : 'Etiqueta',
@@ -27,7 +27,7 @@ class EditTask(ModelForm):
         exclude = ['task_owner']
         labels = {
             'title' : 'Título',
-            'description' : 'Descripción',
+            'description' : 'Descripción y observaciones',
             'deadline' : 'Fecha límite',
             'status' : 'Estado', 
             'task_tag' : 'Etiqueta',

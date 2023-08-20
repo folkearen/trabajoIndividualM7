@@ -22,7 +22,7 @@ ordenadas por fecha de vencimiento.
 
 7✅ Los usuarios podrán crear tareas desde la página principal de la aplicación.
 
-8 Cuando se crea una nueva tarea, el usuario debe elegir una etiqueta de una lista predefinida. 
+8✅  Cuando se crea una nueva tarea, el usuario debe elegir una etiqueta de una lista predefinida. 
 
 9✅ Los usuarios podrán editar tareas desde la página principal de la aplicación.
 
