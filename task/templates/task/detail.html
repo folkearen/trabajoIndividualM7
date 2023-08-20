@@ -1,11 +1,19 @@
 {% extends 'task/layout/base.html' %}
 {% load static %}
+{% block title %}Detalles de tareas{% endblock title %}
+{% block header %}
+    <a class="ps-5"  href=" {% url 'task' %} "><img class="close_modal"   src="{% static 'task/img/back.svg' %}" alt=""></a>
+{% endblock header %}
 {% block main %}
-    <div class="detail_task f_d_column">
-        <p>Título: {{ taskDetail.title}} </p>
-        <p>Descripción: {{ taskDetail.description}} </p>
-        <p>Fecha límite: {{ taskDetail.deadline}}</p>
-        <p>Estado: {{ taskDetail.status}}</p>  
+    <div class="detail_task f_d_column ps-5 pe-5"">           
+        <p class="detail_title f_d_row"><img class="icon_task_detail" src="{% static 'task/img/titleTaskIcon.svg' %}" alt="">Título: </p>
+        <p class="detail_info">{{ taskDetail.title}} </p>
+        <p class="detail_title"><img class="icon_task_detail" src="{% static 'task/img/descriptionTaskIcon.svg' %}" alt="">Descripción:</p>
+        <p class="detail_info">{{ taskDetail.description}} </p>
+        <p class="detail_title"><img class="icon_task_detail" src="{% static 'task/img/deadlineTaskIcon.svg' %}" alt="">Fecha límite:</p>
+        <p class="detail_info">{{ taskDetail.deadline}}</p>
+        <p class="detail_title"><img class="icon_task_detail" src="{% static 'task/img/statusTaskIcon.svg' %}" alt="">Estado:</p>
+        <p class="detail_info">{{ taskDetail.status}}</p>  
     </div>
    
     

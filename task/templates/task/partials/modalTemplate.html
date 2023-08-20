@@ -5,11 +5,11 @@
     <div class="modal-content modal_card">
       <div class="modal-header border-0">
             <img class="close_modal"   data-bs-dismiss="modal" aria-label="Close" src="{% static 'task/img/back.svg' %}" alt="">
+            {% block headModal %}{% endblock headModal %}
       </div>
       <div class="modal-body modal_scrollbar">
             {% block modalBody %}{% endblock modalBody %}
       </div>
-
     </div>
   </div>
 </div>

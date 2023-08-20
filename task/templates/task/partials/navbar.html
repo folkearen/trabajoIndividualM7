@@ -1,5 +1,10 @@
 {% load static %}
 <nav class='nav_principal'>
-    <a href=" {% url 'register' %} "><img class="shape_nav"  src=" {% static 'task/img/addUser.svg' %} " alt=""></a>
-    <a href=" {% url 'login' %} "><img class="shape_nav"  src=" {% static 'task/img/login.svg' %} " alt=""></a>
+    {% if user.is_authenticated %}
+        <a data-bs-toggle="tooltip" title="Cerrar Sesión"  href=" {% url 'logout' %} "><img class="shape_nav" src=" {% static 'task/img/exit.svg' %} " alt=""></a>
+        <a data-bs-toggle="tooltip" title="Ir a Tareas"  href=" {% url 'task' %} "><img class="shape_nav" src=" {% static 'task/img/homeTask.svg' %} " alt=""></a>
+    {% else %}
+        <a data-bs-toggle="tooltip" title="Registrarse" href=" {% url 'register' %} "><img class="shape_nav"  src=" {% static 'task/img/addUser.svg' %} " alt=""></a>
+        <a data-bs-toggle="tooltip" title="Iniciar Sesión" href=" {% url 'login' %} "><img class="shape_nav"  src=" {% static 'task/img/login.svg' %} " alt=""></a>
+    {% endif %}
 </nav>

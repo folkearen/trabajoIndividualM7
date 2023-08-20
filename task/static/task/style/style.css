@@ -31,7 +31,7 @@ body {
     justify-content: center;
 }
 .principal_header{ 
-    max-height: 100vh;
+    height: 100vh;
     padding-top: 2rem;
     width: 15vw; 
 }
@@ -43,11 +43,13 @@ a {
     text-decoration: none;
 }
 
-.scroll_modal::-webkit-scrollbar, .modal_scrollbar::-webkit-scrollbar {
+.scroll_modal::-webkit-scrollbar, .modal_scrollbar::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
     width: 7px;
 
 }
-.scroll_modal::-webkit-scrollbar-thumb, .modal_scrollbar::-webkit-scrollbar-thumb {
+.scroll_modal::-webkit-scrollbar-thumb, .modal_scrollbar::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
     background-color:#16b8f3;
     border-radius: 5rem;
     padding-top: 1rem;
@@ -56,6 +58,20 @@ a {
     -ms-border-radius: 5rem;
     -o-border-radius: 5rem;
 }
+.presentation {
+    align-items: flex-end;
+    color: white;
+    justify-content: flex-end;
+    height: 100vh;
+    padding-right: 4rem;
+}
+#clock {
+    text-align: end;
+    height: 200px;
+    width: 200px;
+ 
+}
+
 .nav_container {
     align-items: center;
     display: flex;
@@ -135,7 +151,8 @@ a {
     width: 2rem;
 }
 
-.modal_card, .card_task_container , .status_previews_task, .forms_style, .detail_task {
+.modal_card, .card_task_container , .status_previews_task, .forms_style, .detail_task, .tooltip-inner, 
+.detail_title{
     background-color: rgba(255,255,255, 0.1);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255,255,255, 0.5);
@@ -145,7 +162,9 @@ a {
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     /* position: relative; */
 }
-
+.title_modal_Text {
+    color: white;
+}
 /* .modal_card::before {
     content: '';
     position: absolute;
@@ -221,16 +240,32 @@ a {
 }
 .nav_task_manager {
     align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    height: 100%;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    min-height: 90%;
 }
 .nav_task_manager .shape_nav {
     height: 3rem;
     margin: 0;
-    margin-bottom: 1.2rem;
+    /* margin-bottom: 1.5rem; */
     width: 3rem;
 } 
+.aux_button_navtask, .form_fiter_status_task {
+    background-color: transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    height: 3rem;
+    /* margin-bottom: 1.5rem; */
+    width: 3rem;
+}
+.task_status_list_count {
+    background-color: #3A6073 !important; 
+    color: #16b8f3;
+    z-index: 2;
+}
 .card_task_container {
     border-radius: 0;
     flex-wrap: wrap;
@@ -266,9 +301,35 @@ a {
     width: 70%;
 }
 .card_task_info_datails {
-    align-items: center;
+    align-items:flex-start;
     flex-wrap: wrap;
    
+}
+
+.design_tag {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    color: #3A6073;
+    margin-left: 0.5rem;
+    padding: 0.3rem 1rem;
+}
+.task_tag {
+    background-color: orange;
+}
+.home_tag {
+    background-color: greenyellow;
+}
+.work_tag {
+    background-color: papayawhip;
+}
+.study_tag {
+    background-color: aquamarine;
+}
+.sport_tag {
+    background-color: yellow;
 }
 .status_previews_task {
     border-radius: 2rem;
@@ -290,15 +351,22 @@ a {
 .close_modal:hover {
     cursor: pointer;
 }
-.detail_task{
-    align-items: flex-start;
-    color: white;
-    justify-content: flex-start;
-    margin-top: 10%;
-    padding: 6rem 6rem;
-    width: 80%;
 
+
+.tooltip-custom {
+    background-color: transparent; /* Cambia el color de fondo */
+    color: orange; /* Cambia el color del texto */
+    border-radius: 8px; /* Ajusta el redondeo de las esquinas */
+    padding: 4px; /* Añade espacio interno */
+    font-weight: bold;
+    
+  }
+
+.tooltip-inner {
+  color: orange;
+  box-shadow: 2px 2px 8px rgba(255,255,255,0.7);
 }
+
 
 @keyframes show {
     from {
@@ -309,4 +377,37 @@ a {
         opacity: 1;
         scale: 100%;
     }
+}
+/* todo: task style end*/
+
+/* todo: task detail start*/
+.detail_task{
+    align-items: flex-start;
+    color: white;
+    justify-content: flex-start;
+    margin-top: 3%;
+    padding: 4rem 4rem;
+    width: 80%;
+}
+.detail_title {
+    color: white;
+    font-weight: bold;
+    padding: 0.2rem 1rem;
+    width: 100%;
+}
+.detail_info {
+    border-radius: 0;
+    padding-left: 4rem;
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.icon_task_detail {
+    align-items: center;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    width: 1.2rem;
 }

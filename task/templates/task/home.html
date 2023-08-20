@@ -5,7 +5,7 @@
         <div class="logo_super">
             <div class="logo-container">
                 <div class="circle"></div>
-                <div class="logo-text">almubaDev</div>
+                <div class="logo-text">TASK</div>
                 <!-- <div class="python-logo"><img src="ruta_a_logo_python.png" alt="Python Logo"></div> -->
                 <!-- <div class="django-logo"><img src="ruta_a_logo_django.png" alt="Django Logo"></div> -->
             </div>
@@ -14,5 +14,16 @@
     </div>
 {% endblock header %}
 {% block main %}
-    
+    {% if user.is_authenticated %}
+        <div class='presentation f_d_column '>
+            <H2>Bienvenido {{ user.first_name}}</H2>
+            {{dataTime}}<h5 id="clock"></h5>
+        </div>    
+    {% else %}
+        <div class='presentation f_d_column '>
+            <H2>Bienvenido {{ user.first_name}}</H2>
+            <h5 id="clock"></h5>
+        </div>   
+    {% endif %}
+
 {% endblock main %}

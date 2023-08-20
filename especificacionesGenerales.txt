@@ -1,48 +1,40 @@
 
-La aplicación debe tener una página de detalles de tarea, que muestre toda la información de la tarea, así
-como un botón para marcar la tarea como completada. Cuando una tarea se marca como completada,
-debe moverse a una lista separada de tareas completadas.
-Los usuarios podrán ver cuántas tareas tienen pendientes, cuántas han completado, cuántas están en
-progreso y cuántas han vencido.
-La aplicación debe utilizar el ORM de Django para interactuar con la base de datos. Debe utilizar el modelo
-de usuario integrado en Django para autenticar a los usuarios y asociar las tareas con el usuario
-correspondiente.s
 
-0 La aplicación debe utilizar el ORM de Django para interactuar con la base de datos. Debe utilizar el modelo
+0✅ La aplicación debe utilizar el ORM de Django para interactuar con la base de datos. Debe utilizar el modelo
 de usuario integrado en Django para autenticar a los usuarios y asociar las tareas con el usuario
-correspondiente.
+correspondiente
 
-1 La aplicación debe permitir a los usuarios, debidamente autenticados y autorizados agregar tareas
+1✅ La aplicación debe permitir a los usuarios, debidamente autenticados y autorizados agregar tareas
 pendientes. 
 
-2 Cada tarea debe tener un título, una descripción, una fecha de vencimiento, un estado
+2✅ Cada tarea debe tener un título, una descripción, una fecha de vencimiento, un estado
 (pendiente, en progreso o completada) 
 
-3 una etiqueta para categorizar la tarea (trabajo, hogar, estudio, etc.).
+3✅ una etiqueta para categorizar la tarea (trabajo, hogar, estudio, etc.).
 
-4 Los usuarios podrán ver cuántas tareas tienen pendientes, cuántas han completado, cuántas están en
+4✅ Los usuarios podrán ver cuántas tareas tienen pendientes, cuántas han completado, cuántas están en
 progreso y cuántas han vencido.
 
-5 La página principal de la aplicación debe mostrar una lista de todas las tareas pendientes del usuario,
+5✅ La página principal de la aplicación debe mostrar una lista de todas las tareas pendientes del usuario,
 ordenadas por fecha de vencimiento. 
 
-6 Los usuarios deberán poder filtrar las tareas por etiqueta y estado.
+6✅ Los usuarios deberán poder filtrar las tareas por etiqueta y estado.
 
-7 Los usuarios podrán crear tareas desde la página principal de la aplicación.
+7✅ Los usuarios podrán crear tareas desde la página principal de la aplicación.
 
 8 Cuando se crea una nueva tarea, el usuario debe elegir una etiqueta de una lista predefinida. 
 
-9 Los usuarios podrán editar tareas desde la página principal de la aplicación.
+9✅ Los usuarios podrán editar tareas desde la página principal de la aplicación.
 
-10 Cuando se edita una tarea existente, el usuario debe poder cambiar su título, descripción, fecha de vencimiento,
+10✅ Cuando se edita una tarea existente, el usuario debe poder cambiar su título, descripción, fecha de vencimiento,
 estado y etiqueta.
 
-10 los usuarios podran eliminar tareas desde la página principal de la aplicación. 
+10✅ los usuarios podran eliminar tareas desde la página principal de la aplicación. 
 
-11 La aplicación debe tener una página de detalles de tarea, que muestre toda la información de la tarea, así
+11✅ La aplicación debe tener una página de detalles de tarea, que muestre toda la información de la tarea, así
 como un botón para marcar la tarea como completada. Cuando una tarea se marca como completada,
-debe moverse a una lista separada de tareas completadas.
+debe moverse a una lista separada de tareas completadas.✅
 
-12 Los usuarios podrán ver cuántas tareas tienen pendientes, cuántas han completado, cuántas están en
-progreso y cuántas han vencido.
+12✅ Los usuarios podrán ver cuántas tareas tienen pendientes, cuántas han completado, cuántas están en
+progreso y cuántas han vencido.✅
 

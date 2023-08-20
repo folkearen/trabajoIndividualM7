@@ -1,0 +1,6 @@
+<form action="{%block urlAction %} {% endblock urlAction %}" method= "GET" >
+    <input class="d-none" type="checkbox" name='filter_option' value="{% block filterValue %}{% endblock filterValue %}"  id='completed' checked>  
+    <button type='submit'  class='aux_button_navtask' data-bs-toggle="tooltip" title="{% block titleTooltip %}{% endblock titleTooltip %}">
+        <img  class="shape_nav" src="{% block navTaskImage %}{% endblock navTaskImage %}" alt="">
+    </button>
+</form>

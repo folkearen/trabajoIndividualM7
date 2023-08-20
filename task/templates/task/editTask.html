@@ -1,0 +1,14 @@
+{% extends 'task/layout/base.html' %}
+{% load static %}
+{% block title %}Detalles de tareas{% endblock title %}
+{% block header %}
+    <a class="ps-5"  href=" {% url 'task' %} "><img class="close_modal"   src="{% static 'task/img/back.svg' %}" alt=""></a>
+{% endblock header %}
+{% block main %}
+    <form class="forms_style mt-3 ps-5 pe-5"  method="POST">
+        <h2 class="modal-title title_modal_custom mb-4" id="exampleModalLabel">Editar tarea</h2>
+        {% csrf_token %}
+        {{ formEditTask.as_p }}
+        <button  type="submit" class="btn_form">Editar tarea</button>
+    </form>
+{% endblock main %}

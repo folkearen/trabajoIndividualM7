@@ -22,7 +22,7 @@ a:hover{
     margin-bottom: 0.4rem;
     width: 100%;
 }
-.forms_style input, .forms_style textarea { 
+.forms_style input, .forms_style textarea, .forms_style select{ 
     background: rgba(255,255,255,0.2);
     border: none;
     border: 1px solid rgba(255,255,255, 0.5);
@@ -36,9 +36,38 @@ a:hover{
     padding: 0.5rem 1rem;
     width: 100%;
 }
+
+.forms_style input[type="date"] {
+    width: 20%;      
+}
+.aux_data_input_design input[type="date"] {
+    width: 50%;
+}
+
+.aux_data_input_design select {
+    width: 50%;
+}
+.forms_style input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    
+}
+.forms_style select {
+    margin: 0;
+}
+.forms_style option {
+    background: none;
+    background-color: #687f89;
+    color: rgba(240, 248, 255,0.8);
+    font-weight: bold;
+}
 .forms_style input::placeholder {
     color: rgba(240, 248, 255,0.5);
+    
 }
+.forms_style_alert {
+    border: yellow solid 1px;
+}
+
 .user_manager_body::-webkit-scrollbar {
     display: none;
 
@@ -61,6 +90,10 @@ a:hover{
 .btn_form:hover  {
     cursor: pointer;
     transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 .btn_form::before {
@@ -71,12 +104,16 @@ a:hover{
     width: 100px;
     height: 100%;
     background: rgba(255,255,255, 0.3);
-    transform: skewX(45deg) translateX(950px);
-    transition: 1s;
-    -webkit-transform: skewX(45deg) translateX(950px);
-    -moz-transform: skewX(45deg) translateX(950px);
-    -ms-transform: skewX(45deg) translateX(950px);
-    -o-transform: skewX(45deg) translateX(950px);
+    transform: skewX(45deg) translateX(1950px);
+    transition: 0.7s;
+    -webkit-transform: skewX(45deg) translateX(1950px);
+    -moz-transform: skewX(45deg) translateX(1950px);
+    -ms-transform: skewX(45deg) translateX(1950px);
+    -o-transform: skewX(45deg) translateX(1950px);
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
 }
 .btn_form:hover::before {
     transform: skewX(45deg) translateX(-140px);
@@ -85,7 +122,9 @@ a:hover{
     -ms-transform: skewX(45deg) translateX(-140px);
     -o-transform: skewX(45deg) translateX(-140px);
 }
-
+.btn_form_alert {
+    background-color: rgba(255, 0, 0, 0.6);
+}
 .title_modal_custom {
     color: white;
     position: relative;
