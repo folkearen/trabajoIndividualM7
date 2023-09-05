@@ -5,7 +5,7 @@
     <h2 class="title_modal_Text">Crear Tarea</h2>
 {% endblock headModal %}
 {% block modalBody %}
-    <form class="forms_style aux_data_input_design " action="{% url 'create'  user.id %}"  method="POST">
+    <form class="forms_style aux_data_input_design" action="{% url 'create'  user.id %}"  method="POST">
         {% csrf_token %}
         {{ formCreateTask.as_p }}
         <button  type="submit" class="btn_form">Crear tarea</button>

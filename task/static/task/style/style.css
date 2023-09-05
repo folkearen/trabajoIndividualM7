@@ -273,6 +273,7 @@ textarea::-webkit-scrollbar-thumb {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding: 0.4rem 1rem;
+    position: relative;
     width: 90%;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -285,6 +286,7 @@ textarea::-webkit-scrollbar-thumb {
     animation-name: show;
     animation-range: entry 10% cover 45%;
     animation-fill-mode: both;
+
     
 }
 .card_task {
@@ -317,19 +319,19 @@ textarea::-webkit-scrollbar-thumb {
     padding: 0.3rem 1rem;
 }
 .task_tag {
-    background-color: orange;
+    background-color: #A1CCD1;
 }
 .home_tag {
-    background-color: greenyellow;
+    background-color: #F1C27B;
 }
 .work_tag {
     background-color: papayawhip;
 }
 .study_tag {
-    background-color: aquamarine;
+    background-color: #FF8787;
 }
 .sport_tag {
-    background-color: yellow;
+    background-color: #ACB1D6;
 }
 .status_previews_task {
     border-radius: 2rem;
@@ -410,4 +412,26 @@ textarea::-webkit-scrollbar-thumb {
     height: 1.2rem;
     margin-right: 0.5rem;
     width: 1.2rem;
+}
+.priority_container {
+    color: #16222A;
+    font-weight: bold;
+    border-top-right-radius: 2rem ;
+    height: 3rem;
+    padding:1rem;
+    width: 10rem;
+}
+.position_priority{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.low_priority{
+    background-color: lightgreen;
+}
+.medium_priority {
+    background-color: yellow;
+}
+.high_priority{
+    background-color: red;
 }

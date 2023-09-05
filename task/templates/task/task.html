@@ -46,6 +46,18 @@
                     <a href=" {% url 'edit' task.id %} ">Editar</a>
                     <a href="#"  data-bs-toggle="modal" data-bs-target="#deleteTaskModal">Eliminar</a>
                 </div>
+                <div class="priority_container position_priority
+                    {% if task.task_priority.priority_type == 'Baja' %} 
+                        low_priority
+                    {% elif task.task_priority.priority_type == 'Media'%}
+                        medium_priority 
+                    {% elif task.task_priority.priority_type == 'Alta'%}
+                        high_priority
+                    {% endif %}"               
+                
+                >
+                    <p>Prioridad: {{task.task_priority}}</p>
+                </div>
             </div>
         </div>
     <div class="modal fade" id="deleteTaskModal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">    

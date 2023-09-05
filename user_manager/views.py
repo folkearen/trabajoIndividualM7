@@ -3,7 +3,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from .forms import forms
 # Create your views here.
-
+@login_required
 def logout(request):
     logout(request)
 

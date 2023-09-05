@@ -17,7 +17,7 @@ def home(request):
 
 
 @login_required
-def task(request, typ=None):
+def task(request, typ=None, prio=None):
 
     formCreateTask = CreateTask()
 
@@ -26,6 +26,7 @@ def task(request, typ=None):
     tasks_completed = Task.objects.filter(task_owner=request.user, status='Completada')
     tasks_expired = Task.objects.filter(deadline__lt=timezone.now().date())
     tasks_filterTag = Task.objects.filter(task_tag=typ)
+    task_filterPriority = Task.objects.filter(task_priority_id=prio)
 
     pending_tasks = tasks_pending.count()
     inprogress_tasks = tasks_inprogress.count()
@@ -33,7 +34,25 @@ def task(request, typ=None):
     expired_tasks = tasks_expired.count()
     is_expired = False
     select_filter = request.GET.get('filter_option')
-
+    
+    
+    if prio != None:
+        is_expired = False
+        tasks = task_filterPriority.order_by('deadline')
+      
+        title_list = f'estas tareas estan filtradas por prioridad.'
+        formCreateTask = CreateTask()
+        return render(request, 'task/task.html', {
+            'tasks' : tasks,
+            'formCreateTask': formCreateTask,
+            'title_list' : title_list,
+            'is_expired' : is_expired,
+            'pending_tasks' : pending_tasks, 
+            'inprogress_tasks' : inprogress_tasks,
+            'completed_tasks' : completed_tasks,
+            'expired_tasks' : expired_tasks
+        })    
+       
     if typ != None:
         is_expired = False
         tasks =  tasks_filterTag.order_by('deadline')
@@ -86,16 +105,20 @@ def task(request, typ=None):
 
 @login_required
 def create(request, id):
-    print(id)
     if request.method == "POST":
         form = CreateTask(request.POST)
         if form.is_valid():
+            selected_owner_id = form.cleaned_data['assigned_to']
             task = form.save(commit=False)
-            task.task_owner_id = id
+            if selected_owner_id != None:
+                task.task_owner_id = selected_owner_id.id
+            else:
+                 task.task_owner_id = id
             task.save()
             return redirect('task')
+        
     return render(request, 'task/createTask.html', {
-        'form': CreateTask()
+         'form' : CreateTask()
     })
 
 @login_required

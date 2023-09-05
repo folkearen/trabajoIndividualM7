@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Task, Tag
+from .models import Tag, Priority
 # Register your models here.
-admin.site.register(Task)
+
 admin.site.register(Tag)
+admin.site.register(Priority)
